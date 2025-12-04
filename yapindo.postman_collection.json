@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "418dc8de-fdc1-4a17-8469-ce43bf9526a2",
+		"name": "Yapindo Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5627830"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Add Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Avengers\",\n    \"description\": \"Save the earth\",\n    \"duration_minutes\": 90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail Movie and Showtime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsIm5hbWUiOiJzYWJpbCIsImVtYWlsIjoic2FiaWxAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpc3MiOiJ5YXBpbmRvIiwiaWF0IjoxNzY0ODEyNzc4fQ.sYXM0HS08A0L0OOwcon7prZsvfO267hOl4imPdSbmQc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/17/showtimes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"17",
+								"showtimes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Avengers Edit\",\n    \"description\": \"Save the earth Edit\",\n    \"duration_minutes\": 90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Showtime",
+			"item": [
+				{
+					"name": "Add Showtime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJkaGlxaSIsImVtYWlsIjoicnVzeWFpZGkuczJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDgwODgzOX0.nHQjyFbhsr8W_A_Um2ZV8zjqCKfdY7FwqzL8ihSjOHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": 1,\n    \"studio_id\": 1,\n    \"start_time\": \"2025-12-04 13:10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/showtimes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"showtimes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Showtime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJkaGlxaSIsImVtYWlsIjoicnVzeWFpZGkuczJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDgwODgzOX0.nHQjyFbhsr8W_A_Um2ZV8zjqCKfdY7FwqzL8ihSjOHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/showtimes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"showtimes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail Showtime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJkaGlxaSIsImVtYWlsIjoicnVzeWFpZGkuczJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDgwODgzOX0.nHQjyFbhsr8W_A_Um2ZV8zjqCKfdY7FwqzL8ihSjOHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/showtimes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"showtimes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail Showtime and Seat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJkaGlxaSIsImVtYWlsIjoicnVzeWFpZGkuczJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDgwODgzOX0.nHQjyFbhsr8W_A_Um2ZV8zjqCKfdY7FwqzL8ihSjOHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/showtimes/25/seats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"showtimes",
+								"25",
+								"seats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Showtime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJkaGlxaSIsImVtYWlsIjoicnVzeWFpZGkuczJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDgwODgzOX0.nHQjyFbhsr8W_A_Um2ZV8zjqCKfdY7FwqzL8ihSjOHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": 1,\n    \"studio_id\": 1,\n    \"start_time\": \"2025-12-04 13:10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/showtimes/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"showtimes",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Showtime",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsIm5hbWUiOiJkaGlxaSIsImVtYWlsIjoicnVzeWFpZGkuczJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDgwODgzOX0.nHQjyFbhsr8W_A_Um2ZV8zjqCKfdY7FwqzL8ihSjOHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/showtimes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"showtimes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Studio",
+			"item": [
+				{
+					"name": "Add Studio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studio_number\": 1,\n    \"seat_capacity\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/studios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"studios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Studio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seat_capacity\": 400\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/studios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"studios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List Studio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/studios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"studios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail Studio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/studios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"studios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Studio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1c3lhaWRpLnNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNzIjoieWFwaW5kbyIsImlhdCI6MTc2NDc3MTAxM30.73gt-aUKOZZuihlN-9--Uo_4WH5klO8jgNdVdMUrp38",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/studios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"studios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"admin\",\n    \"email\": \"admin@admin.com\",\n    \"password\": \"Hahaha12345\",\n    \"role\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@admin.com\",\n    \"password\": \"Hahaha12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Add Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpc3MiOiJ5YXBpbmRvIiwiaWF0IjoxNzY0ODI2MjY4fQ.aWn92QNOvfYXhV4P2GGGuCnkK7PM8ztdWGC-GaTJ1p4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"showtime_id\": 1,\n    \"seats\": [\n        \"A1\",\n        \"A2\"\n    ] \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
