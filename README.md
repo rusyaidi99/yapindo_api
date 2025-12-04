@@ -2,6 +2,8 @@
 ## Spesifikasi:
 - node: v.20.19.3
 - mysql: v.8
+- redis: v.8.4.0 or latest
+- express: v.5.1.0
 ## 1. Menggunakan Docker
 - Clone project dari repository github dan masuk ke folder project memakai terminal.
 - Copy dan rename env.example menjadi .env
